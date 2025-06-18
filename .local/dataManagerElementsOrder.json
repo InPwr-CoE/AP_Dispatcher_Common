@@ -1,0 +1,130 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Main.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "TransactionItem&StateMachine_1",
+        "SystemException&StateMachine_1",
+        "BusinessException&StateMachine_1",
+        "TransactionNumber&StateMachine_1",
+        "Config&StateMachine_1",
+        "RetryNumber&StateMachine_1",
+        "ConsecutiveSystemExceptions&StateMachine_1",
+        "dt_ExceptionTable&StateMachine_1",
+        "dt_EmailTable&StateMachine_1",
+        "str_MappingStatus&StateMachine_1",
+        "JobData&StateMachine_1",
+        "list_MailMessage&StateMachine_1",
+        "ShouldStop&Sequence_25",
+        "int_TempTransactionNumber&State_3",
+        "str_o365ApplicationId&Sequence_44",
+        "secstr_o365ApplicationSecret&Sequence_44"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "ConfigurationFileName",
+        "in_QueueName"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Framework/Process.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dic_MailMetadata&Sequence_1",
+        "dic_VendorInformation&Sequence_1",
+        "str_ErrorMessage&Sequence_1",
+        "str_LocalRuntimeFilePath&Sequence_1",
+        "lst_Attachments&Sequence_1",
+        "str_MailDestinationFolder&Sequence_1",
+        "str_DriveRuntimeFilePath&Sequence_1",
+        "str_AttachmentPrimaryKey&Sequence_1",
+        "str_PostProcessingRule&Sequence_1",
+        "str_EmailFolder&Sequence_1",
+        "str_EmailSubject&Sequence_1",
+        "str_o365ApplicationId&Sequence_1",
+        "secstr_o365ApplicationSecret&Sequence_1",
+        "str_MailSearchQuery&Sequence_1",
+        "arr_emailsfetched&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_TransactionItem",
+        "in_Config",
+        "in_JobData"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Mail/AP_Dispatcher_DownLoadAttachments.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "in_ERPVendorType&Sequence_1",
+        "str_o365ApplicationId&Sequence_1",
+        "secstr_o365ApplicationSecret&Sequence_1",
+        "str_DriveAttachmentFolder&Sequence_1",
+        "str_DriveRuntimeSuccessFolder&Sequence_1",
+        "str_DriveRuntimeExceptionFolder&Sequence_6",
+        "str_LocalRuntimeExceptionFolder&Sequence_6"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_config",
+        "in_TransactionItem",
+        "in_JobData",
+        "in_Mail",
+        "out_lst_Attachments"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Utility/AccountsPayable_Create_StagingLog.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "str_RuntimeLogFileName&Sequence_4",
+        "str_TemplateLogFilePath&Sequence_4",
+        "str_RuntimeLogFolderPath&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_JobData",
+        "in_VendorInformation",
+        "out_strLocalRuntimeFilePath",
+        "out_strDriveRuntimeFilePath"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "Workflows/Utility/AccountsPayable_Update_StagingLog.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_ExistingRuntimeLog&Sequence_4",
+        "str_ExistingPrimaryKey&Sequence_4",
+        "index&Sequence_20",
+        "Subject&Sequence_27"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_dicMailMetadata",
+        "in_dicVendorInformation",
+        "in_strLocalRuntimeFilePath",
+        "in_AttachmentCollection",
+        "in_strErrorMessage",
+        "in_strDriveRuntimeFilePath",
+        "out_NewPrimaryKey"
+      ],
+      "ConstantsSectionElementsOrder": [],
+      "AddedNamespaces": null
+    }
+  ]
+}
