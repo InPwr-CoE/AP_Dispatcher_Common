@@ -15,7 +15,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>938,4976</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1239,3219</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>AP_TEMP_GetMail</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -152,7 +152,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_JobData: Get current job information (Process and Tenant name) to create Runtime folder path.&#xA;3) in_dicVendorInformation: Get the vendor information (vendor name) to create Runtime folder path.&#xA;&#xA;&#xA;Description : This Workflow used to update the mail and vendor information in Runtime Email Staging log excel file.&#xA;&#xA;&#xA;Output: N/A&#xA;" DisplayName="AccountsPayable_Update_StagingLog" sap:VirtualizedContainerService.HintSize="682,4911" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;2) in_JobData: Get current job information (Process and Tenant name) to create Runtime folder path.&#xA;3) in_dicVendorInformation: Get the vendor information (vendor name) to create Runtime folder path.&#xA;&#xA;&#xA;Description : This Workflow used to update the mail and vendor information in Runtime Email Staging log excel file.&#xA;&#xA;&#xA;Output: N/A&#xA;" DisplayName="AccountsPayable_Update_StagingLog" sap:VirtualizedContainerService.HintSize="682,3114" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dt_ExistingRuntimeLog" />
       <Variable x:TypeArguments="x:String" Name="str_ExistingPrimaryKey" />
@@ -204,7 +204,7 @@
       </ui:MultipleAssign>
       <ui:LogMessage DisplayName="Log Message - &quot;AccountsPayable_Update_StagingLog: Existing Primary key [ &quot;+ str_ExistingPrimaryKey + &quot; ]. | New Primary key [ &quot;+str_NewPrimaryKey + &quot; ].&quot;" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_30" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AccountsPayable_Update_StagingLog: Existing Primary key [ &quot;+ str_ExistingPrimaryKey + &quot; ]. | New Primary key [ &quot;+out_NewPrimaryKey + &quot; ].&quot;]" />
     </Sequence>
-    <Sequence sap2010:Annotation.AnnotationText="Update the Mail and Vendor information in the Runtime Staging Log excel file.&#xA;-PrimaryAttachmentKey&#xA;-AttachmentCount&#xA;-AttachmentFilename&#xA;-MessageDate&#xA;-MessageTime&#xA;-MessageSender&#xA;-MessageSubject&#xA;-Excluded&#xA;-EntityVendorName&#xA;-EntityVendorID&#xA;-EntityVendorTypeCode&#xA;-Comment&#xA;&#xA;Copy the local Runtime log file to share drive folder.&#xA;" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="620,3522" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence sap2010:Annotation.AnnotationText="Update the Mail and Vendor information in the Runtime Staging Log excel file.&#xA;-PrimaryAttachmentKey&#xA;-AttachmentCount&#xA;-AttachmentFilename&#xA;-MessageDate&#xA;-MessageTime&#xA;-MessageSender&#xA;-MessageSubject&#xA;-Excluded&#xA;-EntityVendorName&#xA;-EntityVendorID&#xA;-EntityVendorTypeCode&#xA;-Comment&#xA;&#xA;Copy the local Runtime log file to share drive folder.&#xA;" DisplayName="Core Process" sap:VirtualizedContainerService.HintSize="620,1725" sap2010:WorkflowViewState.IdRef="Sequence_20">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:Int32" Name="index" />
       </Sequence.Variables>
@@ -215,7 +215,13 @@
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <If Condition="[in_AttachmentCollection.Count &gt; 0]" DisplayName="Handle Attachment condition and add data row" sap:VirtualizedContainerService.HintSize="558,1854" sap2010:WorkflowViewState.IdRef="If_1">
+      <If Condition="[in_AttachmentCollection.Count &gt; 0]" DisplayName="Handle Attachment condition and add data row" sap:VirtualizedContainerService.HintSize="558,57" sap2010:WorkflowViewState.IdRef="If_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
         <If.Then>
           <Sequence DisplayName="Then - Attachment Update" sap:VirtualizedContainerService.HintSize="512,1041" sap2010:WorkflowViewState.IdRef="Sequence_34">
             <sap:WorkflowViewStateService.ViewState>
@@ -350,7 +356,7 @@
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - &quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message" sap:VirtualizedContainerService.HintSize="354,173" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Error" Message="[&quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message]">
+                <ui:LogMessage DisplayName="Log Message - &quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message" sap:VirtualizedContainerService.HintSize="354,175" sap2010:WorkflowViewState.IdRef="LogMessage_34" Level="Error" Message="[&quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString +&quot; | Exception message: &quot;+exception.Message]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -358,7 +364,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:LogMessage>
-                <Throw DisplayName="Throw - New SystemException(&quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString)" Exception="[New SystemException(&quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="354,113" sap2010:WorkflowViewState.IdRef="Throw_3" />
+                <Throw DisplayName="Throw - New SystemException(&quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString)" Exception="[New SystemException(&quot;AccountsPayable_Update_StagingLog: Unable to copy the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ]. | &quot;+ in_Config(&quot;AP_O365_MailFolder_ManualReview&quot;).ToString)]" sap:VirtualizedContainerService.HintSize="354,114" sap2010:WorkflowViewState.IdRef="Throw_3" />
               </Sequence>
             </ActivityAction>
           </Catch>
@@ -366,6 +372,6 @@
       </TryCatch>
       <ui:LogMessage DisplayName="Log Message - &quot;AccountsPayable_Update_StagingLog: Copied the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ].&quot;" sap:VirtualizedContainerService.HintSize="558,164" sap2010:WorkflowViewState.IdRef="LogMessage_28" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AccountsPayable_Update_StagingLog: Copied the Runtime log file from local folder [ &quot;+in_strLocalRuntimeFilePath +&quot; ] to Share drive folder [ &quot;+in_strDriveRuntimeFilePath +&quot; ].&quot;]" />
     </Sequence>
-    <ui:LogMessage DisplayName="Log Message - &quot;AccountsPayable_Update_StagingLog: Ended&quot;" sap:VirtualizedContainerService.HintSize="608,164" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AccountsPayable_Update_StagingLog: Ended&quot;]" />
+    <ui:LogMessage DisplayName="Log Message - &quot;AccountsPayable_Update_StagingLog: Ended&quot;" sap:VirtualizedContainerService.HintSize="620,164" sap2010:WorkflowViewState.IdRef="LogMessage_15" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;AccountsPayable_Update_StagingLog: Ended&quot;]" />
   </Sequence>
 </Activity>
