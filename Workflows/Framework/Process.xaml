@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>943,2813</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>534,3093</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="100">
@@ -189,7 +189,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_JobData: Get current job information (Process and Tenant name).&#xA;2) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;3) in_TransactionItem: Current transaction as mail message.&#xA;&#xA;Description: Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. &#xA;&#xA;Output: N/A" DisplayName="Process" sap:VirtualizedContainerService.HintSize="541,2708" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Input:&#xA;1) in_JobData: Get current job information (Process and Tenant name).&#xA;2) in_Config: Response from Intialize Configuration activity as a dictionary.&#xA;3) in_TransactionItem: Current transaction as mail message.&#xA;&#xA;Description: Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. &#xA;&#xA;Output: N/A" DisplayName="Process" sap:VirtualizedContainerService.HintSize="541,3028" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="str_o365ApplicationId" />
       <Variable x:TypeArguments="ss:SecureString" Name="secstr_o365ApplicationSecret" />
@@ -319,31 +319,14 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:InvokeWorkflowFile>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="479,57" sap2010:WorkflowViewState.IdRef="CommentOut_8">
-      <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,136" sap2010:WorkflowViewState.IdRef="Sequence_19">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <im:Move_Mail_To_Folder DestinationFolder="[str_MailDestinationFolder]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="354,48" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_1" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                <x:Boolean x:Key="IsPinned">False</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </im:Move_Mail_To_Folder>
-        </Sequence>
-      </ui:CommentOut.Body>
+    <im:Move_Mail_To_Folder DestinationFolder="[str_MailDestinationFolder]" DisplayName="Move Mail To Folder" sap:VirtualizedContainerService.HintSize="479,377" sap2010:WorkflowViewState.IdRef="Move_Mail_To_Folder_2" O365ApplicationId="[str_o365ApplicationId]" O365ApplicationSecret="[secstr_o365ApplicationSecret]" O365MailAccount="[in_Config(&quot;AP_O365_MailAccount&quot;).ToString]" O365Message="[arr_emailsfetched(0)]" O365Tenant="[in_Config(&quot;AP_O365_TenantId&quot;).ToString]">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-    </ui:CommentOut>
+    </im:Move_Mail_To_Folder>
     <ui:LogMessage DisplayName="Log Message - &quot;Process: Ended&quot;" sap:VirtualizedContainerService.HintSize="479,164" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;Process: Ended&quot;]" />
   </Sequence>
 </Activity>

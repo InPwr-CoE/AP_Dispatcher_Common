@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "vFKT3Ta7W7n/YUH1+a2KeagQQWG9nnPHgzop6avc4Xkfp0F7t4DQKq631KID1F9heVvc8Ap0U46mDifFNExsRw==",
+  "dgSpecHash": "s5Q19CIIGFdr4z3Q2va1fgv8ll+n94X9+cm5TqJyUZWupHZE9UwwULkY4+iTHhIpjU5RCXaNj9vjzy+GV2VW9g==",
   "success": true,
   "projectFilePath": "C:\\Users\\CoEBusinessAnalystIC\\Documents\\InPwr.Finance.AccountsPayable.Dispatcher\\AP_Dispatcher_Common\\.local\\",
   "expectedPackageFiles": [
@@ -25,8 +25,8 @@
     "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\inpwr.coe.customcomponent.dataservices\\1.0.1\\inpwr.coe.customcomponent.dataservices.1.0.1.nupkg.sha512",
     "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\inpwr.coe.customcomponent.mail\\1.0.10\\inpwr.coe.customcomponent.mail.1.0.10.nupkg.sha512",
     "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\inpwr.coe.customcomponent.mail.library.runtime\\1.0.10\\inpwr.coe.customcomponent.mail.library.runtime.1.0.10.nupkg.sha512",
-    "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\inpwr.coe.customcomponent.utility\\1.0.9\\inpwr.coe.customcomponent.utility.1.0.9.nupkg.sha512",
-    "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\inpwr.coe.customcomponent.utility.library.runtime\\1.0.9\\inpwr.coe.customcomponent.utility.library.runtime.1.0.9.nupkg.sha512",
+    "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\inpwr.coe.customcomponent.utility\\1.0.12\\inpwr.coe.customcomponent.utility.1.0.12.nupkg.sha512",
+    "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\inpwr.coe.customcomponent.utility.library.runtime\\1.0.12\\inpwr.coe.customcomponent.utility.library.runtime.1.0.12.nupkg.sha512",
     "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\irony.netcore\\1.0.11\\irony.netcore.1.0.11.nupkg.sha512",
     "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\mailkit\\4.7.1.1\\mailkit.4.7.1.1.nupkg.sha512",
     "C:\\Users\\CoEBusinessAnalystIC\\.nuget\\packages\\markdig.signed\\0.31.0\\markdig.signed.0.31.0.nupkg.sha512",
